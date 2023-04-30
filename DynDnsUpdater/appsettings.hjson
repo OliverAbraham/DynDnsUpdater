@@ -1,0 +1,67 @@
+﻿{
+  LocalIPV6Address              : "1234:1234:1234:1234 XXXXXXXXXXXXXXXXXXXXXXX replace me XXXXXXXXXXXXXXXXXXXXXXX",
+  TimeoutSeconds                : 20,
+  WaitTimeSeconds               : 30,
+
+  Sources: 
+  [
+	{
+        Type                    : "Fritzbox",
+        FritzboxUsername        : "MyFritzboxAdminUser XXXXXXXXXXXXXXXXXXXXXXX replace me XXXXXXXXXXXXXXXXXXXXXXX",
+        FritzboxPassword        : "MyFritzboxPasssword XXXXXXXXXXXXXXXXXXXXXXX replace me XXXXXXXXXXXXXXXXXXXXXXX",
+        FritzboxDeviceNumber    : 1,
+	},
+  ],
+
+  Targets: 
+  [
+	{
+        Name                    : "Strato",
+        Method                  : "GET",
+        DynDnsPassword          : "",
+        DynDnsUsername          : "",
+        Host                    : "https://dyndns.strato.com",
+        Request                 : "/nic/update?hostname={DynDnsUsername}&myip={ipv4},{IPv6inclLocalIP}",
+        Authentication          : "Basic",
+        Username                : "MyUsername XXXXXXXXXXXXXXXXXXXXXXX replace me XXXXXXXXXXXXXXXXXXXXXXX",
+        Password                : "MyPassword XXXXXXXXXXXXXXXXXXXXXXX replace me XXXXXXXXXXXXXXXXXXXXXXX",
+        Subdomainlist           : ""
+	},
+    {
+        Name                    : "Strato",
+        Method                  : "GET_WITH_CURL",
+        DynDnsPassword          : "MyPassword XXXXXXXXXXXXXXXXXXXXXXX replace me XXXXXXXXXXXXXXXXXXXXXXX",
+        DynDnsUsername          : "MyUsername XXXXXXXXXXXXXXXXXXXXXXX replace me XXXXXXXXXXXXXXXXXXXXXXX",
+        Host                    : "http://{DynDnsUsername}:{DynDnsPassword}@dyndns.strato.com",
+        Request                 : "/nic/update?hostname={DynDnsUsername}&myip={ipv4},{IPv6inclLocalIP}",
+        Authentication          : "",
+        Username                : "",
+        Password                : "",
+        Subdomainlist           : ""
+    },
+	{
+		Name                    : "Avernis",
+		Method					: "POST"
+		Host                    : "https://login.avernis.de XXXXXXXXXXXXXXXXXXXXXXX replace me XXXXXXXXXXXXXXXXXXXXXXX",
+		Request                 : "/liveconfig/hosting/dnsupdate?hostname={Subdomainlist}.ciristorage2.eu&myip={ipv4}&myip6={IPv6inclLocalIP}",
+		Authentication          : "Basic",
+		Username                : "MyUsername  XXXXXXXXXXXXXXXXXXXXXXX replace me XXXXXXXXXXXXXXXXXXXXXXX",
+		Password                : "MyPassword  XXXXXXXXXXXXXXXXXXXXXXX replace me XXXXXXXXXXXXXXXXXXXXXXX",
+		SubdomainlistFile		: "C:\\Subdomains.json"
+	},
+  ],
+  
+  Notifications:
+  {
+	Method            : "Pushbullet",
+	PushbulletApiKey  : "MyApiKey XXXXXXXXXXXXXXXXXXXXXXX replace me XXXXXXXXXXXXXXXXXXXXXXX",
+	PushbulletDevice  : "MydeviceId XXXXXXXXXXXXXXXXXXXXXXX replace me XXXXXXXXXXXXXXXXXXXXXXX",
+	Subject           : "MySubject XXXXXXXXXXXXXXXXXXXXXXX replace me XXXXXXXXXXXXXXXXXXXXXXX",
+  },
+  
+  InterProcessCommunication:
+  {
+      CurrentIpAddressesFile        : "C:\\Cloud\\IPC\\CurrentExternalIpAddresses",
+      CurrentIpAddressesChangedFile : "C:\\Cloud\\IPC\\CurrentExternalIpAddressesChanged",
+  }
+}

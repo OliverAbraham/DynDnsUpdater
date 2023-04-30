@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DynDnsUpdater": {
+      "commandName": "Project",
+      "commandLineArgs": "--appsettingsfile=C:\\Cloud\\DynDnsUpdater\\appsettings.json"
+    }
+  }
+}

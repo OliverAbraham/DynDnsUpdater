@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ReadExternalIpAddresses": {
+      "commandName": "Project",
+      "commandLineArgs": "-u admin -p marion2077~~"
+    }
+  }
+}
