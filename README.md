@@ -1,5 +1,9 @@
 # DynDNS Updater
-## Overview
+
+![](https://img.shields.io/github/downloads/oliverabraham/DynDNSUpdater/total) ![](https://img.shields.io/github/license/oliverabraham/DynDNSUpdater) ![](https://img.shields.io/github/languages/count/oliverabraham/DynDNSUpdater) ![GitHub Repo stars](https://img.shields.io/github/stars/oliverabraham/DynDNSUpdater?label=repo%20stars) ![GitHub Repo stars](https://img.shields.io/github/stars/oliverabraham?label=user%20stars)
+
+
+
 DynDNS updater updates multiple external DNS services using a TR064 Fritzbox client 
 and REST client, with build-in NLOG logging, pushbullet notifications and IPV6 capability.
 
@@ -92,3 +96,12 @@ https://github.com/OliverAbraham/DynDNSUpdater
 - Linkedin: https://www.linkedin.com/in/oliver-abraham-5345941ab/
 
 Please feel free to comment and suggest improvements!
+
+
+# MAKE A DONATION !
+
+If you find this application useful, buy me a coffee!
+I would appreciate a small donation on https://www.buymeacoffee.com/oliverabraham
+
+<a href="https://www.buymeacoffee.com/app/oliverabraham" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
